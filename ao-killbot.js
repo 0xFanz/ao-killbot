@@ -141,25 +141,25 @@ function postKill(kill, channel = config.botChannel) {
         },
         timestamp: kill.TimeStamp,
         fields: [{
-                name: "Killer Guild",
-                value: (kill.Killer.AllianceName ? "[" + kill.Killer.AllianceName + "] " : '') + (kill.Killer.GuildName ? kill.Killer.GuildName : '<none>'),
-                inline: true
-            },
-            {
-                name: "Victim Guild",
-                value: (kill.Victim.AllianceName ? "[" + kill.Victim.AllianceName + "] " : '') + (kill.Victim.GuildName ? kill.Victim.GuildName : '<none>'),
-                inline: true
-            },
-            {
-                name: "Killer IP",
-                value: kill.Killer.AverageItemPower.toFixed(2),
-                inline: true
-            },
-            {
-                name: "Victim IP",
-                value: kill.Victim.AverageItemPower.toFixed(2),
-                inline: true
-            },
+            name: "Killer Guild",
+            value: (kill.Killer.AllianceName ? "[" + kill.Killer.AllianceName + "] " : '') + (kill.Killer.GuildName ? kill.Killer.GuildName : '<none>'),
+            inline: true
+        },
+        {
+            name: "Victim Guild",
+            value: (kill.Victim.AllianceName ? "[" + kill.Victim.AllianceName + "] " : '') + (kill.Victim.GuildName ? kill.Victim.GuildName : '<none>'),
+            inline: true
+        },
+        {
+            name: "Killer IP",
+            value: kill.Killer.AverageItemPower.toFixed(2),
+            inline: true
+        },
+        {
+            name: "Victim IP",
+            value: kill.Victim.AverageItemPower.toFixed(2),
+            inline: true
+        },
         ],
         footer: {
             text: "Kill #" + kill.EventId
